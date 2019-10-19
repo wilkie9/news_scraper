@@ -25,3 +25,24 @@ app.get("/", function(req, res) {
 app.listen(PORT, function() {
   console.log("App listening on port " + PORT);
 });
+
+axios.get("http://washingtonpost.com").then(function(response) {
+   
+    var $ = cheerio.load(response.data);
+;
+    var headline = [];
+    var summary = [];
+    var url = [];
+    var listItems = $("ul.idiKw li a").each(function(i, elem) {
+        headline.push($(elem).text());
+        summary.push("https://washingtonpost.com/" + $(elem).attr("href"));
+    });
+
+    console.log(headline);
+    console.log(summary);
+    console.log(url);
+});
+
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+
+mongoose.connect(MONGODB_URI);

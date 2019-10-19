@@ -9,19 +9,24 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Web Scraper</title>
+    <title>News Scraper</title>
   </head>
   <body>
 
     <div class="container">
         <h1>News Scraper</h1>
+        <p>"All the News That's Fit to Scrape!"</p>
+        <div class="text-center">
+                <img src="assets/News.jpg" class="rounded" alt="...">
+              </div>
+
         <div class="row mt-5">
                 <div class="col">
                         <form>
                                 <div class="form-group">
                                   <label for="scrapeTerm">Scrape News by Term</label>
                                   <input type="text" class="form-control" id="scrapeTerm" aria-describedby="scrapeHelp" placeholder="Enter single word search term">
-                                  <small id="scrapeHelp" class="form-text text-muted">Search through the news with the term written here</small>
+                                  <small id="scrapeHelp" class="form-text text-muted">Search through the news with the terms written here</small>
                                 </div>
                                 <button type="submit" class="btn btn-primary" id="scrapeButton">Scrape</button>
                         </form>

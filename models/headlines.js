@@ -14,19 +14,18 @@ var headlineSchema = new Schema({
         required: true
     },
     author: {
-        type: String, 
+        type: String,
         required: true
     },
     comment: [{
         type: Schema.Types.ObjectId,
         ref: "comment"
     }],
-
-    var headline = mongoose.model("headline", headlineSchema);
-    
-
-    module.exports = Headline,
-
-
-    
 })
+var Headline = mongoose.model("headline", headlineSchema);
+
+
+module.exports = Headline
+
+
+    

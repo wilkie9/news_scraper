@@ -35,7 +35,9 @@ axios.get("http://washingtonpost.com").then(function(response) {
     var url = [];
     var listItems = $("ul.idiKw li a").each(function(i, elem) {
         headline.push($(elem).text());
-        summary.push("https://washingtonpost.com/" + $(elem).attr("href"));
+        summary.push($(elem).text());
+        url.push($(elem).text());
+        links.push("https://washingtonpost.com/" + $(elem).attr("href"));
     });
 
     console.log(headline);
